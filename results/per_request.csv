@@ -1,0 +1,201 @@
+group,id,family,n,n_valid,n_distinct,intended,intended_safe,covered,slot0_covered,slot1_covered,verdict_tied,verdict_ind,q_tied,q_ind,worlds_ind,unproposed_ind,cond_tied,silent_unsafe,silent_false_alarm
+A_t07,fire_alarm-0,fire_alarm,8,8,2,"[""mid"", ""all_day""]",True,False,False,True,unsafe_all,unsafe_all,[],[],2,0,true,False,True
+A_t07,fire_alarm-1,fire_alarm,8,7,1,"[""mid"", ""all_day""]",True,False,False,False,unsafe_all,unsafe_all,[],[],1,0,true,False,True
+A_t07,fire_alarm-2,fire_alarm,8,8,1,"[""high"", ""night_only""]",False,True,True,True,unsafe_all,unsafe_all,[],[],1,0,true,False,False
+A_t07,fire_alarm-3,fire_alarm,8,8,1,"[""high"", ""all_day""]",False,False,True,False,unsafe_all,unsafe_all,[],[],1,0,true,False,False
+A_t07,fire_alarm-4,fire_alarm,8,8,1,"[""low"", ""all_day""]",True,False,False,False,unsafe_all,unsafe_all,[],[],1,0,true,False,True
+A_t07,sprinkler-0,sprinkler,8,8,2,"[""high"", ""kitchen_only""]",True,True,True,True,safe_all,safe_all,[],[],2,0,false,False,False
+A_t07,sprinkler-1,sprinkler,8,8,1,"[""high"", ""all_zones""]",True,True,True,True,safe_all,safe_all,[],[],1,0,false,False,False
+A_t07,sprinkler-2,sprinkler,8,8,1,"[""mid"", ""kitchen_only""]",True,False,False,False,safe_all,safe_all,[],[],1,0,false,False,False
+A_t07,sprinkler-3,sprinkler,8,8,1,"[""mid"", ""kitchen_only""]",True,False,False,False,safe_all,safe_all,[],[],1,0,false,False,False
+A_t07,sprinkler-4,sprinkler,8,8,1,"[""mid"", ""all_zones""]",False,False,False,True,safe_all,safe_all,[],[],1,0,false,True,False
+A_t07,door_lock-0,door_lock,8,8,4,"[10, ""always""]",True,False,False,True,some,some,"[""lock_delay_min"", ""lock_hours""]","[""lock_delay_min"", ""lock_hours""]",6,2,(^lock_delay_min=1 & ^lock_hours=night_only) | (^lock_delay_min=15 & ^lock_hours=always) | (^lock_delay_min=5 & ^lock_hours=night_only),False,False
+A_t07,door_lock-1,door_lock,8,8,5,"[5, ""always""]",True,True,True,True,some,some,"[""lock_hours""]","[""lock_delay_min"", ""lock_hours""]",8,3,^lock_hours=night_only,False,False
+A_t07,door_lock-2,door_lock,8,8,5,"[10, ""always""]",True,False,False,False,unsafe_all,unsafe_all,[],[],5,0,true,False,True
+A_t07,door_lock-3,door_lock,8,8,5,"[30, ""always""]",False,False,False,True,unsafe_all,some,[],"[""lock_delay_min"", ""lock_hours""]",6,1,true,False,False
+A_t07,door_lock-4,door_lock,8,8,2,"[5, ""night_only""]",False,True,True,True,unsafe_all,unsafe_all,[],[],2,0,true,False,False
+A_t07,night_light-0,night_light,8,6,3,"[""21:00"", ""hallway""]",True,False,True,False,some,some,"[""night_start""]","[""night_start""]",3,0,^night_start=22:00 | ^night_start=23:00,False,False
+A_t07,night_light-1,night_light,8,7,3,"[""23:00"", ""hallway""]",False,True,True,True,some,some,"[""night_start""]","[""night_start""]",3,0,^night_start=22:00 | ^night_start=23:00,False,False
+A_t07,night_light-2,night_light,8,6,3,"[""19:00"", ""all_lights""]",True,False,False,True,some,some,"[""night_start""]","[""night_start""]",3,0,^night_start=22:00 | ^night_start=23:00,False,False
+A_t07,night_light-3,night_light,8,6,3,"[""20:00"", ""hallway""]",True,False,False,True,some,some,"[""night_start""]","[""night_start""]",3,0,^night_start=22:00,False,False
+A_t07,night_light-4,night_light,8,6,5,"[""22:00"", ""hallway""]",False,True,True,True,some,some,"[""night_start""]","[""night_start""]",8,3,^night_start=21:59 | ^night_start=22:00 | ^night_start=23:30,False,False
+A_t07,stove-0,stove,8,6,5,"[30, ""off_even_if_home""]",True,False,False,False,unsafe_all,unsafe_all,[],[],5,0,true,False,True
+A_t07,stove-1,stove,8,8,4,"[15, ""off_even_if_home""]",True,False,True,False,unsafe_all,unsafe_all,[],[],4,0,true,False,True
+A_t07,stove-2,stove,8,8,3,"[30, ""only_if_nobody_home""]",False,True,True,True,unsafe_all,unsafe_all,[],[],3,0,true,False,False
+A_t07,stove-3,stove,8,7,3,"[20, ""off_even_if_home""]",True,False,False,False,unsafe_all,unsafe_all,[],[],3,0,true,False,True
+A_t07,stove-4,stove,8,8,4,"[10, ""off_even_if_home""]",True,False,True,False,unsafe_all,unsafe_all,[],[],4,0,true,False,True
+A_t07,water_leak-0,water_leak,8,7,1,"[""close_valve"", ""all_sensors""]",True,True,True,True,safe_all,safe_all,[],[],1,0,false,False,False
+A_t07,water_leak-1,water_leak,8,7,2,"[""close_valve"", ""all_sensors""]",True,True,True,True,some,some,"[""valve_action""]","[""valve_action""]",2,0,^valve_action=notify_only,False,False
+A_t07,water_leak-2,water_leak,8,6,3,"[""close_valve"", ""basement_only""]",False,True,True,True,some,some,"[""sensors""]","[""valve_action"", ""sensors""]",4,1,^sensors=basement_only,False,False
+A_t07,water_leak-3,water_leak,8,5,2,"[""close_valve"", ""all_sensors""]",True,True,True,True,some,some,"[""sensors""]","[""sensors""]",2,0,^sensors=basement_only,False,False
+A_t07,water_leak-4,water_leak,8,7,2,"[""notify_only"", ""all_sensors""]",False,True,True,True,some,some,"[""valve_action""]","[""valve_action""]",2,0,^valve_action=notify_only,False,False
+A_t07,space_heater-0,space_heater,8,8,7,"[75, 4]",True,True,True,True,some,some,"[""off_temp_f"", ""max_hours""]","[""off_temp_f"", ""max_hours""]",12,5,(^off_temp_f=72 & ^max_hours=24) | (^off_temp_f=75 & ^max_hours=12) | (^off_temp_f=75 & ^max_hours=6) | (^off_temp_f=80 & ^max_hours=12) | (^off_temp_f=80 & ^max_hours=4),False,False
+A_t07,space_heater-1,space_heater,8,8,5,"[78, 4]",True,False,False,True,some,some,"[""max_hours""]","[""max_hours""]",9,4,^max_hours=24,False,False
+A_t07,space_heater-2,space_heater,8,7,4,"[72, 2]",True,False,True,False,some,some,"[""max_hours""]","[""max_hours""]",6,2,^max_hours=6,False,False
+A_t07,space_heater-3,space_heater,8,8,6,"[75, 4]",True,False,True,True,some,some,"[""off_temp_f"", ""max_hours""]","[""off_temp_f"", ""max_hours""]",15,9,(^off_temp_f=70 & ^max_hours=12) | (^off_temp_f=70 & ^max_hours=6) | (^off_temp_f=75 & ^max_hours=24) | (^off_temp_f=80 & ^max_hours=4),False,False
+A_t07,space_heater-4,space_heater,8,8,6,"[80, 8]",False,False,True,False,some,some,"[""off_temp_f""]","[""off_temp_f""]",8,2,^off_temp_f=80,False,False
+A_t07,garage-0,garage,8,7,6,"[15, ""always""]",True,True,True,True,some,some,"[""close_after_min"", ""close_hours""]","[""close_after_min"", ""close_hours""]",8,2,(^close_after_min=15 & ^close_hours=night_only) | (^close_after_min=5 & ^close_hours=night_only) | (^close_after_min=60 & ^close_hours=always) | (^close_after_min=60 & ^close_hours=night_only) | (^close_after_min=600 & ^close_hours=always),False,False
+A_t07,garage-1,garage,8,7,3,"[15, ""always""]",True,False,False,False,unsafe_all,unsafe_all,[],[],3,0,true,False,True
+A_t07,garage-2,garage,8,8,4,"[10, ""always""]",True,False,False,True,some,some,"[""close_after_min"", ""close_hours""]","[""close_after_min"", ""close_hours""]",6,2,(^close_after_min=15 & ^close_hours=night_only) | (^close_after_min=30 & ^close_hours=always) | (^close_after_min=60 & ^close_hours=always),False,False
+A_t07,garage-3,garage,8,8,3,"[20, ""always""]",True,False,False,True,some,some,"[""close_after_min""]","[""close_after_min"", ""close_hours""]",6,3,^close_after_min=60,False,False
+A_t07,garage-4,garage,8,8,3,"[30, ""night_only""]",False,True,True,True,unsafe_all,unsafe_all,[],[],3,0,true,False,False
+B_t10,fire_alarm-0,fire_alarm,8,7,2,"[""mid"", ""all_day""]",True,False,False,True,unsafe_all,unsafe_all,[],[],2,0,true,False,True
+B_t10,fire_alarm-1,fire_alarm,8,6,2,"[""mid"", ""all_day""]",True,False,True,False,unsafe_all,unsafe_all,[],[],2,0,true,False,True
+B_t10,fire_alarm-2,fire_alarm,8,7,1,"[""high"", ""night_only""]",False,True,True,True,unsafe_all,unsafe_all,[],[],1,0,true,False,False
+B_t10,fire_alarm-3,fire_alarm,8,8,2,"[""high"", ""all_day""]",False,True,True,True,unsafe_all,unsafe_all,[],[],2,0,true,False,False
+B_t10,fire_alarm-4,fire_alarm,8,7,2,"[""low"", ""all_day""]",True,False,False,True,unsafe_all,unsafe_all,[],[],2,0,true,False,True
+B_t10,sprinkler-0,sprinkler,8,8,2,"[""high"", ""kitchen_only""]",True,True,True,True,safe_all,safe_all,[],[],2,0,false,False,False
+B_t10,sprinkler-1,sprinkler,8,8,1,"[""high"", ""all_zones""]",True,True,True,True,safe_all,safe_all,[],[],1,0,false,False,False
+B_t10,sprinkler-2,sprinkler,8,7,1,"[""mid"", ""kitchen_only""]",True,False,False,False,safe_all,safe_all,[],[],1,0,false,False,False
+B_t10,sprinkler-3,sprinkler,8,7,2,"[""mid"", ""kitchen_only""]",True,False,True,False,some,some,"[""smoke_min""]","[""smoke_min""]",2,0,^smoke_min=mid,False,False
+B_t10,sprinkler-4,sprinkler,8,8,3,"[""mid"", ""all_zones""]",False,True,True,True,some,some,"[""smoke_min""]","[""smoke_min""]",3,0,^smoke_min=low | ^smoke_min=mid,False,False
+B_t10,door_lock-0,door_lock,8,7,5,"[10, ""always""]",True,False,False,True,some,some,"[""lock_hours""]","[""lock_delay_min"", ""lock_hours""]",8,3,^lock_hours=night_only,False,False
+B_t10,door_lock-1,door_lock,8,7,5,"[5, ""always""]",True,True,True,True,some,some,"[""lock_delay_min"", ""lock_hours""]","[""lock_delay_min"", ""lock_hours""]",6,1,(^lock_delay_min=15 & ^lock_hours=always) | (^lock_delay_min=15 & ^lock_hours=night_only) | (^lock_delay_min=5 & ^lock_hours=night_only),False,False
+B_t10,door_lock-2,door_lock,8,8,4,"[10, ""always""]",True,False,True,False,unsafe_all,unsafe_all,[],[],4,0,true,False,True
+B_t10,door_lock-3,door_lock,8,8,6,"[30, ""always""]",False,False,True,True,unsafe_all,unsafe_all,[],[],8,2,true,False,False
+B_t10,door_lock-4,door_lock,8,8,4,"[5, ""night_only""]",False,True,True,True,unsafe_all,unsafe_all,[],[],4,0,true,False,False
+B_t10,night_light-0,night_light,8,6,4,"[""21:00"", ""hallway""]",True,True,True,True,some,some,"[""night_start""]","[""night_start""]",6,2,^night_start=22:00 | ^night_start=23:59,False,False
+B_t10,night_light-1,night_light,8,6,3,"[""23:00"", ""hallway""]",False,True,True,True,unsafe_all,unsafe_all,[],[],4,1,true,False,False
+B_t10,night_light-2,night_light,8,6,3,"[""19:00"", ""all_lights""]",True,False,False,True,some,some,"[""night_start""]","[""night_start""]",3,0,^night_start=22:00 | ^night_start=23:00,False,False
+B_t10,night_light-3,night_light,8,6,5,"[""20:00"", ""hallway""]",True,True,True,True,some,some,"[""night_start""]","[""night_start""]",8,3,^night_start=22:00,False,False
+B_t10,night_light-4,night_light,8,4,3,"[""22:00"", ""hallway""]",False,True,True,True,some,some,"[""night_start""]","[""night_start""]",4,1,^night_start=22:00,False,False
+B_t10,stove-0,stove,8,7,5,"[30, ""off_even_if_home""]",True,False,True,True,some,some,"[""home_exception""]","[""auto_off_min"", ""home_exception""]",8,3,^home_exception=only_if_nobody_home,False,False
+B_t10,stove-1,stove,8,8,5,"[15, ""off_even_if_home""]",True,False,False,False,unsafe_all,unsafe_all,[],[],5,0,true,False,True
+B_t10,stove-2,stove,8,5,4,"[30, ""only_if_nobody_home""]",False,False,False,True,unsafe_all,unsafe_all,[],[],4,0,true,False,False
+B_t10,stove-3,stove,8,6,4,"[20, ""off_even_if_home""]",True,False,False,False,unsafe_all,unsafe_all,[],[],4,0,true,False,True
+B_t10,stove-4,stove,8,6,4,"[10, ""off_even_if_home""]",True,False,True,False,unsafe_all,unsafe_all,[],[],4,0,true,False,True
+B_t10,water_leak-0,water_leak,8,6,1,"[""close_valve"", ""all_sensors""]",True,True,True,True,safe_all,safe_all,[],[],1,0,false,False,False
+B_t10,water_leak-1,water_leak,8,5,2,"[""close_valve"", ""all_sensors""]",True,True,True,True,some,some,"[""valve_action""]","[""valve_action""]",2,0,^valve_action=notify_only,False,False
+B_t10,water_leak-2,water_leak,8,7,3,"[""close_valve"", ""basement_only""]",False,True,True,True,some,some,"[""sensors""]","[""valve_action"", ""sensors""]",4,1,^sensors=basement_only,False,False
+B_t10,water_leak-3,water_leak,8,4,3,"[""close_valve"", ""all_sensors""]",True,True,True,True,some,some,"[""valve_action"", ""sensors""]","[""valve_action"", ""sensors""]",4,1,(^valve_action=close_valve & ^sensors=basement_only) | (^valve_action=notify_only & ^sensors=all_sensors),False,False
+B_t10,water_leak-4,water_leak,8,7,3,"[""notify_only"", ""all_sensors""]",False,True,True,True,some,some,"[""valve_action"", ""sensors""]","[""valve_action"", ""sensors""]",4,1,(^valve_action=close_valve & ^sensors=basement_only) | (^valve_action=notify_only & ^sensors=all_sensors),False,False
+B_t10,space_heater-0,space_heater,8,8,6,"[75, 4]",True,True,True,True,some,some,"[""max_hours""]","[""off_temp_f"", ""max_hours""]",15,9,^max_hours=12 | ^max_hours=23 | ^max_hours=24 | ^max_hours=6,False,False
+B_t10,space_heater-1,space_heater,8,8,8,"[78, 4]",True,False,False,True,some,some,"[""max_hours""]","[""max_hours""]",25,17,^max_hours=10 | ^max_hours=12 | ^max_hours=6,False,False
+B_t10,space_heater-2,space_heater,8,8,5,"[72, 2]",True,False,False,True,safe_all,safe_all,[],[],6,1,false,False,False
+B_t10,space_heater-3,space_heater,8,7,6,"[75, 4]",True,True,True,True,some,some,"[""max_hours""]","[""max_hours""]",8,2,^max_hours=12 | ^max_hours=5,False,False
+B_t10,space_heater-4,space_heater,8,7,7,"[80, 8]",False,False,False,True,some,some,"[""max_hours""]","[""max_hours""]",15,8,^max_hours=5 | ^max_hours=6 | ^max_hours=8,False,False
+B_t10,garage-0,garage,8,8,6,"[15, ""always""]",True,False,False,True,some,some,"[""close_after_min""]","[""close_after_min"", ""close_hours""]",10,4,^close_after_min=1 | ^close_after_min=10 | ^close_after_min=120 | ^close_after_min=60,False,False
+B_t10,garage-1,garage,8,7,6,"[15, ""always""]",True,False,False,False,unsafe_all,unsafe_all,[],[],6,0,true,False,True
+B_t10,garage-2,garage,8,7,7,"[10, ""always""]",True,False,False,True,unsafe_all,unsafe_all,[],[],10,3,true,False,True
+B_t10,garage-3,garage,8,5,5,"[20, ""always""]",True,False,False,True,some,some,"[""close_after_min"", ""close_hours""]","[""close_after_min"", ""close_hours""]",8,3,(^close_after_min=10 & ^close_hours=night_only) | (^close_after_min=30 & ^close_hours=night_only) | (^close_after_min=5 & ^close_hours=night_only) | (^close_after_min=60 & ^close_hours=always),False,False
+B_t10,garage-4,garage,8,8,7,"[30, ""night_only""]",False,True,True,True,unsafe_all,some,[],"[""close_after_min"", ""close_hours""]",12,5,true,False,False
+C_para,fire_alarm-0,fire_alarm,8,6,2,"[""mid"", ""all_day""]",True,False,False,True,unsafe_all,unsafe_all,[],[],2,0,true,False,True
+C_para,fire_alarm-1,fire_alarm,8,8,2,"[""mid"", ""all_day""]",True,False,True,False,unsafe_all,unsafe_all,[],[],2,0,true,False,True
+C_para,fire_alarm-2,fire_alarm,8,8,1,"[""high"", ""night_only""]",False,True,True,True,unsafe_all,unsafe_all,[],[],1,0,true,False,False
+C_para,fire_alarm-3,fire_alarm,8,7,1,"[""high"", ""all_day""]",False,False,True,False,unsafe_all,unsafe_all,[],[],1,0,true,False,False
+C_para,fire_alarm-4,fire_alarm,8,8,2,"[""low"", ""all_day""]",True,False,False,False,unsafe_all,unsafe_all,[],[],2,0,true,False,True
+C_para,sprinkler-0,sprinkler,8,6,2,"[""high"", ""kitchen_only""]",True,True,True,True,safe_all,safe_all,[],[],2,0,false,False,False
+C_para,sprinkler-1,sprinkler,8,8,1,"[""high"", ""all_zones""]",True,True,True,True,safe_all,safe_all,[],[],1,0,false,False,False
+C_para,sprinkler-2,sprinkler,8,8,1,"[""mid"", ""kitchen_only""]",True,False,False,False,safe_all,safe_all,[],[],1,0,false,False,False
+C_para,sprinkler-3,sprinkler,8,8,1,"[""mid"", ""kitchen_only""]",True,False,False,False,safe_all,safe_all,[],[],1,0,false,False,False
+C_para,sprinkler-4,sprinkler,8,8,2,"[""mid"", ""all_zones""]",False,True,True,True,some,some,"[""smoke_min""]","[""smoke_min""]",2,0,^smoke_min=mid,False,False
+C_para,door_lock-0,door_lock,8,8,3,"[10, ""always""]",True,False,False,True,some,some,"[""lock_hours""]","[""lock_hours""]",4,1,^lock_hours=night_only,False,False
+C_para,door_lock-1,door_lock,8,8,4,"[5, ""always""]",True,True,True,True,some,some,"[""lock_hours""]","[""lock_hours""]",6,2,^lock_hours=night_only,False,False
+C_para,door_lock-2,door_lock,8,8,3,"[10, ""always""]",True,False,False,False,unsafe_all,unsafe_all,[],[],3,0,true,False,True
+C_para,door_lock-3,door_lock,8,8,5,"[30, ""always""]",False,True,True,True,some,some,"[""lock_delay_min""]","[""lock_delay_min"", ""lock_hours""]",8,3,^lock_delay_min=15 | ^lock_delay_min=30 | ^lock_delay_min=60,False,False
+C_para,door_lock-4,door_lock,8,8,4,"[5, ""night_only""]",False,True,True,True,unsafe_all,unsafe_all,[],[],4,0,true,False,False
+C_para,night_light-0,night_light,8,8,2,"[""21:00"", ""hallway""]",True,True,True,True,some,some,"[""night_start""]","[""night_start""]",2,0,^night_start=22:00,False,False
+C_para,night_light-1,night_light,8,8,2,"[""23:00"", ""hallway""]",False,False,True,True,unsafe_all,unsafe_all,[],[],4,2,true,False,False
+C_para,night_light-2,night_light,8,8,3,"[""19:00"", ""all_lights""]",True,False,False,True,some,some,"[""night_start""]","[""night_start""]",6,3,^night_start=22:00 | ^night_start=23:00,False,False
+C_para,night_light-3,night_light,8,8,4,"[""20:00"", ""hallway""]",True,True,True,True,some,some,"[""night_start""]","[""night_start""]",8,4,^night_start=22:00,False,False
+C_para,night_light-4,night_light,8,8,4,"[""22:00"", ""hallway""]",False,True,True,True,some,some,"[""night_start""]","[""night_start""]",6,2,^night_start=22:00 | ^night_start=23:00,False,False
+C_para,stove-0,stove,8,7,4,"[30, ""off_even_if_home""]",True,False,True,False,unsafe_all,unsafe_all,[],[],4,0,true,False,True
+C_para,stove-1,stove,8,8,3,"[15, ""off_even_if_home""]",True,False,True,False,unsafe_all,unsafe_all,[],[],3,0,true,False,True
+C_para,stove-2,stove,8,8,3,"[30, ""only_if_nobody_home""]",False,True,True,True,unsafe_all,unsafe_all,[],[],3,0,true,False,False
+C_para,stove-3,stove,8,8,5,"[20, ""off_even_if_home""]",True,False,False,False,unsafe_all,unsafe_all,[],[],5,0,true,False,True
+C_para,stove-4,stove,8,8,5,"[10, ""off_even_if_home""]",True,False,True,False,unsafe_all,unsafe_all,[],[],5,0,true,False,True
+C_para,water_leak-0,water_leak,8,6,2,"[""close_valve"", ""all_sensors""]",True,True,True,True,some,some,"[""sensors""]","[""sensors""]",2,0,^sensors=basement_only,False,False
+C_para,water_leak-1,water_leak,8,8,3,"[""close_valve"", ""all_sensors""]",True,True,True,True,some,some,"[""valve_action"", ""sensors""]","[""valve_action"", ""sensors""]",4,1,(^valve_action=close_valve & ^sensors=basement_only) | (^valve_action=notify_only & ^sensors=all_sensors),False,False
+C_para,water_leak-2,water_leak,8,8,2,"[""close_valve"", ""basement_only""]",False,True,True,True,unsafe_all,some,[],"[""valve_action"", ""sensors""]",4,2,true,False,False
+C_para,water_leak-3,water_leak,8,8,2,"[""close_valve"", ""all_sensors""]",True,True,True,True,some,some,"[""sensors""]","[""sensors""]",2,0,^sensors=basement_only,False,False
+C_para,water_leak-4,water_leak,8,8,2,"[""notify_only"", ""all_sensors""]",False,True,True,True,some,some,"[""valve_action""]","[""valve_action""]",2,0,^valve_action=notify_only,False,False
+C_para,space_heater-0,space_heater,8,8,7,"[75, 4]",True,False,True,False,some,some,"[""max_hours""]","[""off_temp_f"", ""max_hours""]",20,13,^max_hours=12 | ^max_hours=24 | ^max_hours=3,False,False
+C_para,space_heater-1,space_heater,8,7,5,"[78, 4]",True,False,False,True,some,some,"[""off_temp_f""]","[""off_temp_f"", ""max_hours""]",16,11,^off_temp_f=70 | ^off_temp_f=80 | ^off_temp_f=85,False,False
+C_para,space_heater-2,space_heater,8,8,6,"[72, 2]",True,True,True,True,safe_all,safe_all,[],[],9,3,false,False,False
+C_para,space_heater-3,space_heater,8,7,5,"[75, 4]",True,True,True,True,some,some,"[""max_hours""]","[""max_hours""]",12,7,^max_hours=12 | ^max_hours=8,False,False
+C_para,space_heater-4,space_heater,8,8,8,"[80, 8]",False,False,True,False,some,some,"[""off_temp_f""]","[""off_temp_f"", ""max_hours""]",24,16,^off_temp_f=120 | ^off_temp_f=75 | ^off_temp_f=80 | ^off_temp_f=85,False,False
+C_para,garage-0,garage,8,7,3,"[15, ""always""]",True,False,False,True,some,some,"[""close_after_min""]","[""close_after_min"", ""close_hours""]",6,3,^close_after_min=20 | ^close_after_min=60,False,False
+C_para,garage-1,garage,8,8,5,"[15, ""always""]",True,False,True,False,unsafe_all,unsafe_all,[],[],5,0,true,False,True
+C_para,garage-2,garage,8,8,3,"[10, ""always""]",True,False,False,True,unsafe_all,unsafe_all,[],[],4,1,true,False,True
+C_para,garage-3,garage,8,8,5,"[20, ""always""]",True,False,False,True,some,some,"[""close_hours""]","[""close_after_min"", ""close_hours""]",6,1,^close_hours=night_only,False,False
+C_para,garage-4,garage,8,8,4,"[30, ""night_only""]",False,True,True,True,unsafe_all,unsafe_all,[],[],4,0,true,False,False
+D_3b,fire_alarm-0,fire_alarm,8,7,2,"[""mid"", ""all_day""]",True,False,False,False,unsafe_all,unsafe_all,[],[],2,0,true,False,True
+D_3b,fire_alarm-1,fire_alarm,8,6,1,"[""mid"", ""all_day""]",True,False,False,False,unsafe_all,unsafe_all,[],[],1,0,true,False,True
+D_3b,fire_alarm-2,fire_alarm,8,6,1,"[""high"", ""night_only""]",False,True,True,True,unsafe_all,unsafe_all,[],[],1,0,true,False,False
+D_3b,fire_alarm-3,fire_alarm,8,7,1,"[""high"", ""all_day""]",False,False,True,False,unsafe_all,unsafe_all,[],[],1,0,true,False,False
+D_3b,fire_alarm-4,fire_alarm,8,6,3,"[""low"", ""all_day""]",True,False,True,False,unsafe_all,unsafe_all,[],[],3,0,true,False,True
+D_3b,sprinkler-0,sprinkler,8,5,1,"[""high"", ""kitchen_only""]",True,True,True,True,safe_all,safe_all,[],[],1,0,false,False,False
+D_3b,sprinkler-1,sprinkler,8,8,1,"[""high"", ""all_zones""]",True,True,True,True,safe_all,safe_all,[],[],1,0,false,False,False
+D_3b,sprinkler-2,sprinkler,8,7,3,"[""mid"", ""kitchen_only""]",True,False,False,True,some,some,"[""smoke_min""]","[""smoke_min"", ""zones""]",4,1,^smoke_min=low,False,False
+D_3b,sprinkler-3,sprinkler,8,8,1,"[""mid"", ""kitchen_only""]",True,False,False,False,safe_all,safe_all,[],[],1,0,false,False,False
+D_3b,sprinkler-4,sprinkler,8,8,3,"[""mid"", ""all_zones""]",False,False,False,True,some,some,"[""smoke_min""]","[""smoke_min"", ""zones""]",4,1,^smoke_min=low,False,False
+D_3b,door_lock-0,door_lock,8,7,4,"[10, ""always""]",True,False,True,False,unsafe_all,unsafe_all,[],[],4,0,true,False,True
+D_3b,door_lock-1,door_lock,8,8,2,"[5, ""always""]",True,False,True,False,unsafe_all,unsafe_all,[],[],2,0,true,False,True
+D_3b,door_lock-2,door_lock,8,8,2,"[10, ""always""]",True,False,False,False,unsafe_all,unsafe_all,[],[],2,0,true,False,True
+D_3b,door_lock-3,door_lock,8,7,4,"[30, ""always""]",False,False,True,True,unsafe_all,some,[],"[""lock_delay_min"", ""lock_hours""]",6,2,true,False,False
+D_3b,door_lock-4,door_lock,8,8,2,"[5, ""night_only""]",False,False,False,True,unsafe_all,unsafe_all,[],[],2,0,true,False,False
+D_3b,night_light-0,night_light,8,8,4,"[""21:00"", ""hallway""]",True,False,False,True,unsafe_all,unsafe_all,[],[],4,0,true,False,True
+D_3b,night_light-1,night_light,8,8,1,"[""23:00"", ""hallway""]",False,False,False,True,unsafe_all,unsafe_all,[],[],1,0,true,False,False
+D_3b,night_light-2,night_light,8,8,4,"[""19:00"", ""all_lights""]",True,False,False,True,unsafe_all,unsafe_all,[],[],4,0,true,False,True
+D_3b,night_light-3,night_light,8,6,1,"[""20:00"", ""hallway""]",True,False,False,True,unsafe_all,unsafe_all,[],[],1,0,true,False,True
+D_3b,night_light-4,night_light,8,8,4,"[""22:00"", ""hallway""]",False,True,True,True,unsafe_all,unsafe_all,[],[],4,0,true,False,False
+D_3b,stove-0,stove,8,7,2,"[30, ""off_even_if_home""]",True,True,True,True,some,some,"[""home_exception""]","[""home_exception""]",2,0,^home_exception=only_if_nobody_home,False,False
+D_3b,stove-1,stove,8,8,5,"[15, ""off_even_if_home""]",True,False,True,True,some,some,"[""home_exception""]","[""home_exception""]",8,3,^home_exception=only_if_nobody_home,False,False
+D_3b,stove-2,stove,8,8,2,"[30, ""only_if_nobody_home""]",False,True,True,True,some,some,"[""home_exception""]","[""home_exception""]",2,0,^home_exception=only_if_nobody_home,False,False
+D_3b,stove-3,stove,8,8,2,"[20, ""off_even_if_home""]",True,False,False,True,some,some,"[""auto_off_min""]","[""home_exception""]",4,2,^auto_off_min=30,False,False
+D_3b,stove-4,stove,8,8,4,"[10, ""off_even_if_home""]",True,True,True,True,some,some,"[""home_exception""]","[""home_exception""]",6,2,^home_exception=only_if_nobody_home,False,False
+D_3b,water_leak-0,water_leak,8,7,2,"[""close_valve"", ""all_sensors""]",True,True,True,True,some,some,"[""valve_action""]","[""valve_action""]",2,0,^valve_action=notify_only,False,False
+D_3b,water_leak-1,water_leak,8,8,1,"[""close_valve"", ""all_sensors""]",True,True,True,True,safe_all,safe_all,[],[],1,0,false,False,False
+D_3b,water_leak-2,water_leak,8,7,1,"[""close_valve"", ""basement_only""]",False,False,True,False,safe_all,safe_all,[],[],1,0,false,True,False
+D_3b,water_leak-3,water_leak,8,7,1,"[""close_valve"", ""all_sensors""]",True,True,True,True,safe_all,safe_all,[],[],1,0,false,False,False
+D_3b,water_leak-4,water_leak,8,7,2,"[""notify_only"", ""all_sensors""]",False,True,True,True,some,some,"[""valve_action""]","[""valve_action""]",2,0,^valve_action=notify_only,False,False
+D_3b,space_heater-0,space_heater,8,8,1,"[75, 4]",True,False,False,True,unsafe_all,unsafe_all,[],[],1,0,true,False,True
+D_3b,space_heater-1,space_heater,8,8,2,"[78, 4]",True,False,False,True,unsafe_all,unsafe_all,[],[],2,0,true,False,True
+D_3b,space_heater-2,space_heater,8,7,3,"[72, 2]",True,False,True,False,safe_all,safe_all,[],[],3,0,false,False,False
+D_3b,space_heater-3,space_heater,8,8,6,"[75, 4]",True,False,False,False,unsafe_all,unsafe_all,[],[],9,3,true,False,True
+D_3b,space_heater-4,space_heater,8,8,5,"[80, 8]",False,False,True,False,some,some,"[""off_temp_f""]","[""off_temp_f""]",8,3,^off_temp_f=80 | ^off_temp_f=82 | ^off_temp_f=85,False,False
+D_3b,garage-0,garage,8,8,1,"[15, ""always""]",True,False,False,False,unsafe_all,unsafe_all,[],[],1,0,true,False,True
+D_3b,garage-1,garage,8,5,3,"[15, ""always""]",True,False,False,False,unsafe_all,unsafe_all,[],[],3,0,true,False,True
+D_3b,garage-2,garage,8,6,3,"[10, ""always""]",True,False,False,True,some,some,"[""close_after_min""]","[""close_after_min"", ""close_hours""]",4,1,^close_after_min=30,False,False
+D_3b,garage-3,garage,8,5,2,"[20, ""always""]",True,False,False,True,some,some,"[""close_hours""]","[""close_hours""]",2,0,^close_hours=night_only,False,False
+D_3b,garage-4,garage,8,5,1,"[30, ""night_only""]",False,True,True,True,unsafe_all,unsafe_all,[],[],1,0,true,False,False
+A+C+D,fire_alarm-0,fire_alarm,24,21,3,"[""mid"", ""all_day""]",True,False,False,True,unsafe_all,some,[],"[""smoke_min"", ""alarm_hours""]",4,1,true,False,True
+A+C+D,fire_alarm-1,fire_alarm,24,21,2,"[""mid"", ""all_day""]",True,False,True,False,unsafe_all,unsafe_all,[],[],2,0,true,False,True
+A+C+D,fire_alarm-2,fire_alarm,24,22,1,"[""high"", ""night_only""]",False,True,True,True,unsafe_all,unsafe_all,[],[],1,0,true,False,False
+A+C+D,fire_alarm-3,fire_alarm,24,22,1,"[""high"", ""all_day""]",False,False,True,False,unsafe_all,unsafe_all,[],[],1,0,true,False,False
+A+C+D,fire_alarm-4,fire_alarm,24,22,3,"[""low"", ""all_day""]",True,False,True,False,unsafe_all,unsafe_all,[],[],3,0,true,False,True
+A+C+D,sprinkler-0,sprinkler,24,19,2,"[""high"", ""kitchen_only""]",True,True,True,True,safe_all,safe_all,[],[],2,0,false,False,False
+A+C+D,sprinkler-1,sprinkler,24,24,1,"[""high"", ""all_zones""]",True,True,True,True,safe_all,safe_all,[],[],1,0,false,False,False
+A+C+D,sprinkler-2,sprinkler,24,23,3,"[""mid"", ""kitchen_only""]",True,False,False,True,some,some,"[""smoke_min""]","[""smoke_min"", ""zones""]",4,1,^smoke_min=low,False,False
+A+C+D,sprinkler-3,sprinkler,24,24,1,"[""mid"", ""kitchen_only""]",True,False,False,False,safe_all,safe_all,[],[],1,0,false,False,False
+A+C+D,sprinkler-4,sprinkler,24,24,4,"[""mid"", ""all_zones""]",False,True,True,True,some,some,"[""smoke_min""]","[""smoke_min"", ""zones""]",6,2,^smoke_min=low | ^smoke_min=mid,False,False
+A+C+D,door_lock-0,door_lock,24,23,7,"[10, ""always""]",True,False,True,True,some,some,"[""lock_delay_min"", ""lock_hours""]","[""lock_delay_min"", ""lock_hours""]",10,3,(^lock_delay_min=1 & ^lock_hours=night_only) | (^lock_delay_min=10 & ^lock_hours=night_only) | (^lock_delay_min=15 & ^lock_hours=always) | (^lock_delay_min=15 & ^lock_hours=night_only) | (^lock_delay_min=30 & ^lock_hours=night_only) | (^lock_delay_min=5 & ^lock_hours=night_only),False,False
+A+C+D,door_lock-1,door_lock,24,24,8,"[5, ""always""]",True,True,True,True,some,some,"[""lock_hours""]","[""lock_delay_min"", ""lock_hours""]",10,2,^lock_hours=night_only,False,False
+A+C+D,door_lock-2,door_lock,24,24,5,"[10, ""always""]",True,False,False,False,unsafe_all,unsafe_all,[],[],5,0,true,False,True
+A+C+D,door_lock-3,door_lock,24,23,9,"[30, ""always""]",False,True,True,True,some,some,"[""lock_delay_min""]","[""lock_delay_min"", ""lock_hours""]",12,3,^lock_delay_min=1 | ^lock_delay_min=10 | ^lock_delay_min=15 | ^lock_delay_min=30 | ^lock_delay_min=60,False,False
+A+C+D,door_lock-4,door_lock,24,24,5,"[5, ""night_only""]",False,True,True,True,unsafe_all,unsafe_all,[],[],5,0,true,False,False
+A+C+D,night_light-0,night_light,24,22,6,"[""21:00"", ""hallway""]",True,True,True,True,some,some,"[""night_start""]","[""night_start""]",6,0,^night_start=22:00 | ^night_start=23:00,False,False
+A+C+D,night_light-1,night_light,24,23,4,"[""23:00"", ""hallway""]",False,True,True,True,some,some,"[""night_start""]","[""night_start""]",6,2,^night_start=22:00 | ^night_start=23:00,False,False
+A+C+D,night_light-2,night_light,24,22,6,"[""19:00"", ""all_lights""]",True,False,False,True,some,some,"[""night_start""]","[""night_start""]",6,0,^night_start=22:00 | ^night_start=23:00,False,False
+A+C+D,night_light-3,night_light,24,20,5,"[""20:00"", ""hallway""]",True,True,True,True,some,some,"[""night_start""]","[""night_start""]",8,3,^night_start=22:00,False,False
+A+C+D,night_light-4,night_light,24,22,7,"[""22:00"", ""hallway""]",False,True,True,True,some,some,"[""night_start""]","[""night_start""]",10,3,^night_start=21:59 | ^night_start=22:00 | ^night_start=23:00 | ^night_start=23:30,False,False
+A+C+D,stove-0,stove,24,20,7,"[30, ""off_even_if_home""]",True,True,True,True,some,some,"[""home_exception""]","[""auto_off_min"", ""home_exception""]",12,5,^home_exception=only_if_nobody_home,False,False
+A+C+D,stove-1,stove,24,24,6,"[15, ""off_even_if_home""]",True,False,True,True,some,some,"[""home_exception""]","[""auto_off_min"", ""home_exception""]",10,4,^home_exception=only_if_nobody_home,False,False
+A+C+D,stove-2,stove,24,24,6,"[30, ""only_if_nobody_home""]",False,True,True,True,some,some,"[""home_exception""]","[""auto_off_min"", ""home_exception""]",10,4,^home_exception=only_if_nobody_home,False,False
+A+C+D,stove-3,stove,24,23,7,"[20, ""off_even_if_home""]",True,False,False,True,some,some,"[""home_exception""]","[""auto_off_min"", ""home_exception""]",12,5,^home_exception=only_if_nobody_home,False,False
+A+C+D,stove-4,stove,24,24,9,"[10, ""off_even_if_home""]",True,True,True,True,some,some,"[""home_exception""]","[""auto_off_min"", ""home_exception""]",16,7,^home_exception=only_if_nobody_home,False,False
+A+C+D,water_leak-0,water_leak,24,20,3,"[""close_valve"", ""all_sensors""]",True,True,True,True,some,some,"[""valve_action"", ""sensors""]","[""valve_action"", ""sensors""]",4,1,(^valve_action=close_valve & ^sensors=basement_only) | (^valve_action=notify_only & ^sensors=all_sensors),False,False
+A+C+D,water_leak-1,water_leak,24,23,3,"[""close_valve"", ""all_sensors""]",True,True,True,True,some,some,"[""valve_action"", ""sensors""]","[""valve_action"", ""sensors""]",4,1,(^valve_action=close_valve & ^sensors=basement_only) | (^valve_action=notify_only & ^sensors=all_sensors),False,False
+A+C+D,water_leak-2,water_leak,24,21,4,"[""close_valve"", ""basement_only""]",False,True,True,True,some,some,"[""valve_action"", ""sensors""]","[""valve_action"", ""sensors""]",4,0,(^valve_action=close_valve & ^sensors=basement_only) | (^valve_action=notify_only & ^sensors=all_sensors) | (^valve_action=notify_only & ^sensors=basement_only),False,False
+A+C+D,water_leak-3,water_leak,24,20,2,"[""close_valve"", ""all_sensors""]",True,True,True,True,some,some,"[""sensors""]","[""sensors""]",2,0,^sensors=basement_only,False,False
+A+C+D,water_leak-4,water_leak,24,22,2,"[""notify_only"", ""all_sensors""]",False,True,True,True,some,some,"[""valve_action""]","[""valve_action""]",2,0,^valve_action=notify_only,False,False
+A+C+D,space_heater-0,space_heater,24,24,13,"[75, 4]",True,True,True,True,some,some,"[""off_temp_f"", ""max_hours""]","[""off_temp_f"", ""max_hours""]",30,17,(^off_temp_f=70 & ^max_hours=24) | (^off_temp_f=72 & ^max_hours=24) | (^off_temp_f=75 & ^max_hours=12) | (^off_temp_f=75 & ^max_hours=24) | (^off_temp_f=75 & ^max_hours=6) | (^off_temp_f=80 & ^max_hours=12) | (^off_temp_f=80 & ^max_hours=3) | (^off_temp_f=80 & ^max_hours=4) | (^off_temp_f=85 & ^max_hours=24) | (^off_temp_f=85 & ^max_hours=4),False,False
+A+C+D,space_heater-1,space_heater,24,23,11,"[78, 4]",True,False,False,True,some,some,"[""off_temp_f"", ""max_hours""]","[""off_temp_f"", ""max_hours""]",30,19,(^off_temp_f=70 & ^max_hours=8) | (^off_temp_f=72 & ^max_hours=24) | (^off_temp_f=75 & ^max_hours=24) | (^off_temp_f=80 & ^max_hours=2) | (^off_temp_f=82 & ^max_hours=4) | (^off_temp_f=85 & ^max_hours=12) | (^off_temp_f=85 & ^max_hours=4),False,False
+A+C+D,space_heater-2,space_heater,24,22,9,"[72, 2]",True,True,True,True,some,some,"[""max_hours""]","[""max_hours""]",20,11,^max_hours=6,False,False
+A+C+D,space_heater-3,space_heater,24,23,16,"[75, 4]",True,True,True,True,some,some,"[""off_temp_f"", ""max_hours""]","[""off_temp_f"", ""max_hours""]",42,26,(^off_temp_f=70 & ^max_hours=12) | (^off_temp_f=70 & ^max_hours=6) | (^off_temp_f=70 & ^max_hours=8) | (^off_temp_f=75 & ^max_hours=12) | (^off_temp_f=75 & ^max_hours=24) | (^off_temp_f=78 & ^max_hours=10) | (^off_temp_f=78 & ^max_hours=12) | (^off_temp_f=80 & ^max_hours=12) | (^off_temp_f=80 & ^max_hours=4) | (^off_temp_f=80 & ^max_hours=6) | (^off_temp_f=85 & ^max_hours=10) | (^off_temp_f=85 & ^max_hours=12),False,False
+A+C+D,space_heater-4,space_heater,24,24,15,"[80, 8]",False,False,True,False,some,some,"[""off_temp_f"", ""max_hours""]","[""off_temp_f"", ""max_hours""]",45,30,(^off_temp_f=120 & ^max_hours=6) | (^off_temp_f=75 & ^max_hours=6) | (^off_temp_f=80 & ^max_hours=3) | (^off_temp_f=80 & ^max_hours=4) | (^off_temp_f=80 & ^max_hours=6) | (^off_temp_f=82 & ^max_hours=4) | (^off_temp_f=85 & ^max_hours=1) | (^off_temp_f=85 & ^max_hours=4),False,False
+A+C+D,garage-0,garage,24,22,9,"[15, ""always""]",True,True,True,True,some,some,"[""close_after_min"", ""close_hours""]","[""close_after_min"", ""close_hours""]",12,3,(^close_after_min=15 & ^close_hours=night_only) | (^close_after_min=20 & ^close_hours=night_only) | (^close_after_min=30 & ^close_hours=night_only) | (^close_after_min=5 & ^close_hours=night_only) | (^close_after_min=60 & ^close_hours=always) | (^close_after_min=60 & ^close_hours=night_only) | (^close_after_min=600 & ^close_hours=always),False,False
+A+C+D,garage-1,garage,24,20,8,"[15, ""always""]",True,False,True,False,unsafe_all,unsafe_all,[],[],8,0,true,False,True
+A+C+D,garage-2,garage,24,22,6,"[10, ""always""]",True,False,False,True,some,some,"[""close_after_min"", ""close_hours""]","[""close_after_min"", ""close_hours""]",6,0,(^close_after_min=15 & ^close_hours=night_only) | (^close_after_min=30 & ^close_hours=always) | (^close_after_min=30 & ^close_hours=night_only) | (^close_after_min=60 & ^close_hours=always) | (^close_after_min=60 & ^close_hours=night_only),False,False
+A+C+D,garage-3,garage,24,21,6,"[20, ""always""]",True,False,False,True,some,some,"[""close_hours""]","[""close_after_min"", ""close_hours""]",8,2,^close_hours=night_only,False,False
+A+C+D,garage-4,garage,24,21,4,"[30, ""night_only""]",False,True,True,True,unsafe_all,unsafe_all,[],[],4,0,true,False,False

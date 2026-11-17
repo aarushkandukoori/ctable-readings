@@ -1,0 +1,324 @@
+{
+ "k": 8,
+ "settings": {
+  "A_t07": {
+   "label": "1.5B, T=0.7, one prompt",
+   "requests": 40,
+   "valid_rate": 0.925,
+   "miss_intended": 0.6,
+   "miss_intended_count": 24,
+   "slot_miss": 0.3875,
+   "mean_distinct": 3.15,
+   "silent_unsafe": 1,
+   "silent_false_alarm": 9,
+   "some_tied": 19,
+   "some_ind": 20,
+   "spurious_some_ind": 1,
+   "question_differs": 4,
+   "requests_with_unproposed": 13,
+   "unproposed_worlds_total": 39,
+   "worlds_ind_total": 165,
+   "questions_tied_total": 24,
+   "questions_ind_total": 29
+  },
+  "B_t10": {
+   "label": "1.5B, T=1.0, one prompt",
+   "requests": 40,
+   "valid_rate": 0.853125,
+   "miss_intended": 0.525,
+   "miss_intended_count": 21,
+   "slot_miss": 0.2875,
+   "mean_distinct": 3.925,
+   "silent_unsafe": 0,
+   "silent_false_alarm": 9,
+   "some_tied": 19,
+   "some_ind": 20,
+   "spurious_some_ind": 1,
+   "question_differs": 6,
+   "requests_with_unproposed": 20,
+   "unproposed_worlds_total": 71,
+   "worlds_ind_total": 228,
+   "questions_tied_total": 23,
+   "questions_ind_total": 30
+  },
+  "C_para": {
+   "label": "1.5B, T=0.7, 4 paraphrased prompts",
+   "requests": 40,
+   "valid_rate": 0.965625,
+   "miss_intended": 0.525,
+   "miss_intended_count": 21,
+   "slot_miss": 0.3125,
+   "mean_distinct": 3.275,
+   "silent_unsafe": 0,
+   "silent_false_alarm": 10,
+   "some_tied": 18,
+   "some_ind": 19,
+   "spurious_some_ind": 1,
+   "question_differs": 7,
+   "requests_with_unproposed": 17,
+   "unproposed_worlds_total": 75,
+   "worlds_ind_total": 206,
+   "questions_tied_total": 19,
+   "questions_ind_total": 27
+  },
+  "D_3b": {
+   "label": "3B, T=0.7, one prompt",
+   "requests": 40,
+   "valid_rate": 0.896875,
+   "miss_intended": 0.7,
+   "miss_intended_count": 28,
+   "slot_miss": 0.4125,
+   "mean_distinct": 2.35,
+   "silent_unsafe": 1,
+   "silent_false_alarm": 14,
+   "some_tied": 12,
+   "some_ind": 13,
+   "spurious_some_ind": 1,
+   "question_differs": 5,
+   "requests_with_unproposed": 9,
+   "unproposed_worlds_total": 18,
+   "worlds_ind_total": 112,
+   "questions_tied_total": 12,
+   "questions_ind_total": 17
+  },
+  "A+C+D": {
+   "label": "pool of A, C and D (24 samples)",
+   "requests": 40,
+   "valid_rate": 0.9291666666666667,
+   "miss_intended": 0.4,
+   "miss_intended_count": 16,
+   "slot_miss": 0.2,
+   "mean_distinct": 5.725,
+   "silent_unsafe": 0,
+   "silent_false_alarm": 5,
+   "some_tied": 28,
+   "some_ind": 29,
+   "spurious_some_ind": 1,
+   "question_differs": 11,
+   "requests_with_unproposed": 23,
+   "unproposed_worlds_total": 155,
+   "worlds_ind_total": 384,
+   "questions_tied_total": 38,
+   "questions_ind_total": 50
+  }
+ },
+ "curves": {
+  "A_t07": [
+   0.825,
+   0.775,
+   0.75,
+   0.7,
+   0.7,
+   0.65,
+   0.625,
+   0.6
+  ],
+  "B_t10": [
+   0.85,
+   0.825,
+   0.725,
+   0.65,
+   0.6,
+   0.525,
+   0.525,
+   0.525
+  ],
+  "C_para": [
+   0.85,
+   0.675,
+   0.65,
+   0.65,
+   0.65,
+   0.625,
+   0.575,
+   0.525
+  ],
+  "D_3b": [
+   0.85,
+   0.8,
+   0.775,
+   0.775,
+   0.75,
+   0.725,
+   0.7,
+   0.7
+  ],
+  "A+C+D": [
+   0.75,
+   0.65,
+   0.6,
+   0.6,
+   0.6,
+   0.525,
+   0.45,
+   0.4
+  ]
+ },
+ "type_coverage": {
+  "A_t07": {
+   "action": {
+    "plausible": 10,
+    "seen": 8,
+    "share_seen": 0.8
+   },
+   "duration": {
+    "plausible": 95,
+    "seen": 43,
+    "share_seen": 0.45263157894736844
+   },
+   "exception": {
+    "plausible": 10,
+    "seen": 5,
+    "share_seen": 0.5
+   },
+   "scope": {
+    "plausible": 60,
+    "seen": 41,
+    "share_seen": 0.6833333333333333
+   },
+   "threshold": {
+    "plausible": 50,
+    "seen": 26,
+    "share_seen": 0.52
+   },
+   "time_window": {
+    "plausible": 25,
+    "seen": 14,
+    "share_seen": 0.56
+   }
+  },
+  "B_t10": {
+   "action": {
+    "plausible": 10,
+    "seen": 9,
+    "share_seen": 0.9
+   },
+   "duration": {
+    "plausible": 95,
+    "seen": 42,
+    "share_seen": 0.4421052631578947
+   },
+   "exception": {
+    "plausible": 10,
+    "seen": 6,
+    "share_seen": 0.6
+   },
+   "scope": {
+    "plausible": 60,
+    "seen": 48,
+    "share_seen": 0.8
+   },
+   "threshold": {
+    "plausible": 50,
+    "seen": 26,
+    "share_seen": 0.52
+   },
+   "time_window": {
+    "plausible": 25,
+    "seen": 13,
+    "share_seen": 0.52
+   }
+  },
+  "C_para": {
+   "action": {
+    "plausible": 10,
+    "seen": 8,
+    "share_seen": 0.8
+   },
+   "duration": {
+    "plausible": 95,
+    "seen": 45,
+    "share_seen": 0.47368421052631576
+   },
+   "exception": {
+    "plausible": 10,
+    "seen": 5,
+    "share_seen": 0.5
+   },
+   "scope": {
+    "plausible": 60,
+    "seen": 46,
+    "share_seen": 0.7666666666666667
+   },
+   "threshold": {
+    "plausible": 50,
+    "seen": 28,
+    "share_seen": 0.56
+   },
+   "time_window": {
+    "plausible": 25,
+    "seen": 14,
+    "share_seen": 0.56
+   }
+  },
+  "D_3b": {
+   "action": {
+    "plausible": 10,
+    "seen": 7,
+    "share_seen": 0.7
+   },
+   "duration": {
+    "plausible": 95,
+    "seen": 32,
+    "share_seen": 0.3368421052631579
+   },
+   "exception": {
+    "plausible": 10,
+    "seen": 10,
+    "share_seen": 1.0
+   },
+   "scope": {
+    "plausible": 60,
+    "seen": 38,
+    "share_seen": 0.6333333333333333
+   },
+   "threshold": {
+    "plausible": 50,
+    "seen": 19,
+    "share_seen": 0.38
+   },
+   "time_window": {
+    "plausible": 25,
+    "seen": 8,
+    "share_seen": 0.32
+   }
+  },
+  "A+C+D": {
+   "action": {
+    "plausible": 10,
+    "seen": 9,
+    "share_seen": 0.9
+   },
+   "duration": {
+    "plausible": 95,
+    "seen": 67,
+    "share_seen": 0.7052631578947368
+   },
+   "exception": {
+    "plausible": 10,
+    "seen": 10,
+    "share_seen": 1.0
+   },
+   "scope": {
+    "plausible": 60,
+    "seen": 49,
+    "share_seen": 0.8166666666666667
+   },
+   "threshold": {
+    "plausible": 50,
+    "seen": 36,
+    "share_seen": 0.72
+   },
+   "time_window": {
+    "plausible": 25,
+    "seen": 16,
+    "share_seen": 0.64
+   }
+  }
+ },
+ "menu_baseline": {
+  "requests": 40,
+  "some": 40,
+  "questions_total": 75
+ }
+}
