@@ -18,6 +18,20 @@ Everything here is small and synthetic: 40 hand-written requests over 8 device
 scenarios, 2 open settings per request, intended readings labeled by me. Treat the
 numbers as a pilot, not a benchmark.
 
+## Results (pilot, from `results/summary.json`)
+
+- With 8 samples per request, the intended reading never appeared for 24 of 40 requests
+  (Qwen2.5-1.5B, temperature 0.7, one prompt). Higher temperature or 4 paraphrased prompts:
+  21 of 40. The 3B model: 28 of 40. Pooling three settings (24 samples): 16 of 40.
+- In 10 of 40 requests (1.5B, T=0.7) all samples fell on the same side of the safety
+  property, so the c-table gave an all-or-nothing verdict with no question, and the
+  intended reading was on the other side. Pooling cut that to 5.
+- Independent c-variables invented 39 of 165 worlds (1.5B, T=0.7) and 155 of 384 with the
+  pooled samples. Tying them with a global condition changed the clarifying question in 4
+  and 11 requests, and cut the settings asked about from 29 to 24 and from 50 to 38.
+
+The 3-page write-up is in `note/Kandukoori_Ctables_Note.pdf`.
+
 ## Layout
 
 - `ctable_readings/dataset.py` - the 40 requests, the plausible readings for each
